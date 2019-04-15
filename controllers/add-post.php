@@ -1,8 +1,8 @@
 <?php
-$app['database']->insert('posts', [
+App::get('database')->insert('articles', [
     'title' => $_POST['title'], 
-    'post_text' => $_POST['text'],
-    'post_date' => strtotime(date('Y-m-d H:i:s')),
+    'article_text' => $_POST['text'],
+    'date' => strtotime(date('Y-m-d H:i:s')),
     'category'=> $_POST[],
     'is_published' => $_POST['is_published']
 ]);

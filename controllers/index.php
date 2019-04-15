@@ -1,8 +1,7 @@
 <?php
 
-die(var_dump($database));
 
-$blog_posts = $database->selectAll('articles');
+$blog_posts = App::get('database')->selectAll('articles');
 
 
 require 'views/index.view.php';
