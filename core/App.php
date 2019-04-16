@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 // class to add basic Dependency Injection
 
 class App {

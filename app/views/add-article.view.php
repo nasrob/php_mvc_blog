@@ -13,12 +13,14 @@
                 <input name="title" type="text"><br>
                 <label for="post_text">Content</label>
                 <label for="category">Category</label>
-                <?php
-                    $categories = $app['config']['categories'];
-                ?>
+                
                 <select name="category" id="">
                     <option value="">-- Select a Category --</option>
-                    
+                    <?php
+                        $categories = $app['config']['categories'];
+                    ?>
+                    <?php foreach ($categories as $category)?>
+                    <option value="<?= $category ?>"><?= $category ?></option>
                 </select><br><br>
                 <input type="submit" name="submit" value="Submit">
             </form>

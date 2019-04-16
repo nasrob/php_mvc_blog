@@ -1,7 +1,10 @@
 <?php 
 
-require 'controllers/UsersController.php';
-require 'controllers/PagesController.php';
+namespace App\Core;
+
+require 'app/controllers/UsersController.php';
+require 'app/controllers/PagesController.php';
+require 'App/Controllers/ArticlesController.php';
 
 class Router
 {
@@ -42,6 +45,7 @@ class Router
 
     protected function callAction($controller, $action)
     {
+        $controller = "App\\Controllers\\{$controller}";
         $controller = new $controller;
 
         if (! method_exists($controller, $action)) {
