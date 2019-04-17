@@ -14,12 +14,19 @@ class Article {
 
     public function createArticle()
     {
-        // $article = App::get('database')->insert('articles', [
-        //     'title' => $_POST['title'], 
-        //     'article_text' => $_POST['text'],
-        //     'date' => strtotime(date('Y-m-d H:i:s')),
-        //     'category'=> $_POST[],
-        //     'is_published' => $_POST['is_published']
-        // ]);
+        // die(var_dump($_POST));
+        $title = $_POST['title'];
+        $text = $_POST['text'];
+        $category = '';
+        $status = $_POST['status'];
+
+        // die(var_dump($status));
+        $article = App::get('database')->insert('articles', [
+            'title' => $title, 
+            'article_text' => $text,
+            'date' => (date('Y-m-d H:i:s')),
+            'category'=> $category,
+            'is_published' => $status,
+        ]);
     }
 }

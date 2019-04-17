@@ -5,12 +5,14 @@
     <title>Blog posts</title>
 </head>
 <body>
+    <?php require('partials/nav.view.php'); ?>
+    
     <div>
         <h1>Blog Posts</h1>
         <?php foreach ($articles as $article) : ?>
             <br>
             <div>
-                <li><?= ($article->title); ?></li>
+                <h3><?= ($article->title); ?></h3>
                 <li><?= ($article->article_text); ?></li>
                 <li>Published <?= ($article->date); ?></li>
             </div>

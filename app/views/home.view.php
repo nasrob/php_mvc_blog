@@ -5,6 +5,7 @@
         <title>Home</title>
     </head>
     <body>
-        <h1>Home sweet home</h1>
+        <?php require('partials/nav.view.php'); ?>
+        <h1>Welcome to Medum</h1>
     </body>
 </html>

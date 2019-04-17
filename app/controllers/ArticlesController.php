@@ -21,8 +21,9 @@ class ArticlesController {
 
     public function create()
     {
+        // die(var_dump($_POST));
         $article = Article::createArticle();   
-        redirect('/');
+        redirect('/articles');
     }
 
 }
